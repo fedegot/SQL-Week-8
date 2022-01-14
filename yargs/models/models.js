@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const connection = require("../db/connection");
-const { setApproval, firstUpper } = require("./modelHelpers");
+const { setApproval } = require("./modelHelpers");
 
 const Movie = connection.define("Movies", {
   title: {
@@ -8,7 +8,7 @@ const Movie = connection.define("Movies", {
     allowNull: false,
     get() {
       const rawValue = this.getDataValue("title");
-      return firstUpper(rawValue);
+      //return firstUpper(rawValue);
     },
   },
   actor: {
@@ -16,7 +16,7 @@ const Movie = connection.define("Movies", {
     allowNull: false,
     get() {
       const rawValue = this.getDataValue("actor");
-      return firstUpper(rawValue);
+      //return firstUpper(rawValue);
     },
   },
   approval: {
@@ -24,7 +24,7 @@ const Movie = connection.define("Movies", {
     allowNull: false,
     get() {
       const rawValue = this.getDataValue("approval");
-      return firstUpper(rawValue);
+      //return firstUpper(rawValue);
     },
   },
   rating: {
